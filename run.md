@@ -12,14 +12,20 @@ Make sure you have the following installed on your system:
 
 ## Steps
 
-### Step 1: Create a Virtual Environment
+### Step 1: Clone the Odoo 17 Repository
+
+Open a terminal (Command Prompt on Windows, Terminal on macOS and Linux) and run the following command to clone the Odoo 17 repository:
+
+```sh
+git clone -b 17.0 https://www.github.com/odoo/odoo.git --depth 1
+```
+
+### Step 2: Create a Virtual Environment
 
 1. **Navigate to the Odoo Directory:**
 
-   Open a terminal (Command Prompt on Windows, Terminal on macOS and Linux) and navigate to the directory where Odoo is installed:
-
    ```sh
-   cd /path/to/odoo
+   cd odoo
    ```
 
 2. **Create the Virtual Environment:**
@@ -41,7 +47,7 @@ Make sure you have the following installed on your system:
      source venv/bin/activate
      ```
 
-### Step 2: Install Dependencies
+### Step 3: Install Dependencies
 
 1. **Upgrade pip:**
 
@@ -58,12 +64,8 @@ Make sure you have the following installed on your system:
    ```sh
    pip install -r requirements.txt
    ```
-   ```sh
-   pip install --upgrade setuptools
-   ```
-   
 
-### Step 3: Configure PostgreSQL
+### Step 4: Configure PostgreSQL
 
 Create a new PostgreSQL database user and a database for Odoo (if not already done):
 
@@ -73,7 +75,7 @@ CREATE USER odoo WITH PASSWORD 'odoo';
 CREATE DATABASE odoo OWNER odoo;
 ```
 
-### Step 4: Create a Configuration File
+### Step 5: Create a Configuration File
 
 Create a configuration file named `odoo.conf` in the Odoo directory with the following content:
 
@@ -87,7 +89,7 @@ db_password = odoo
 db_name = odoo
 ```
 
-### Step 5: Run the Odoo Server
+### Step 6: Run the Odoo Server
 
 Start the Odoo server within the virtual environment using the following command:
 
@@ -100,7 +102,7 @@ Start the Odoo server within the virtual environment using the following command
   python odoo-bin -c C:\path\to\your\odoo.conf
   ```
 
-### Step 6: Access Odoo
+### Step 7: Access Odoo
 
 Open your web browser and navigate to `http://localhost:8069`. You should see the Odoo login page.
 
