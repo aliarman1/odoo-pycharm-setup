@@ -64,6 +64,9 @@ git clone -b 17.0 https://www.github.com/odoo/odoo.git --depth 1
    ```sh
    pip install -r requirements.txt
    ```
+   ```sh
+   pip install --upgrade setuptools
+   ```
 
 ### Step 4: Configure PostgreSQL
 
